@@ -403,16 +403,18 @@ body {
     margin-left: 10%;
     margin-right: 10%;
   }
-  .container-all-menu .container-all-menu .menu-title {
+  .container-all-menu .menu-title {
     width: 350px;
   }
-  .container-all-menu .container-all-menu .sections-menu {
+  .container-all-menu .sections-menu {
     width: 70%;
   }
 }
 
 .button {
-  margin: 20px;
+  margin: 40px;
+  font-size: 1rem;
+  cursor: pointer;
   padding: 15px 40px;
   font-size: 1rem;
   color: white;
@@ -420,11 +422,12 @@ body {
   background: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
   border-radius: 1.563rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
+  opacity: 1;
   transition: all 0.5s;
 }
 .button:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
   transform: scale(1.02s);
   opacity: 0.9;
 }
