@@ -1,3 +1,7 @@
+@import "../../base/mixins";
+@import "../../base/animations";
+@import "../../base/keyframes";
+
 body {
     margin: 0 auto;
     max-width: 1440px;
@@ -15,12 +19,10 @@ body {
         height: 275px;
         object-fit: cover;
     }
-
 }
 
 .container-all-menu {
     position: relative;
-
     margin-top: -3rem;
     background-color: $color1;
     border-radius: 20px;
@@ -29,7 +31,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+   
     
 .menu-title {
     position: relative;
@@ -51,27 +53,18 @@ body {
     }
 
     .heart-full {
-        opacity: 0;
-        transition: all;
-    }
-
-    .heart-full:hover {
-        opacity: 1;
-        color: transparent;
-        -webkit-background-clip: text;
-        background-image: linear-gradient(180deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 68%);
-        transition: 0.5s;
-    }
-
-    
-}
-
+     @include icone-favorite-choice;
+    }    
+}           
 
 .sections-menu {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
     width: 100%;
+    -webkit-animation: arrive-menu 1s;                  
+    @keyframes arrive-menu
+    
 
     .title {
         margin: 30px 0 0 0;
@@ -82,38 +75,41 @@ body {
 
     .line {
         width: 40px;
-        border: 2px solid $color11;
+        border: 2px solid $color2;
         margin-top: 5px;
     }
 
-    .container-cards {
+    .container-cards {        
         display: flex;
         flex-direction: column;
         margin-top: 15px;
         border-radius: 20px;
-        gap: 15px;
-    } 
-
+        gap: 15px;            
+    }
+            
+    
+    
     .cards {
         display: flex;
         flex-direction: row;
         justify-content: space-between;        
-        background-color: white;
+        background-color: $color10;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         border-radius: 15px;        
         white-space: nowrap;
-        overflow: hidden;
+        overflow: hidden;           
     }    
 
     .cards-content {
         padding: 15px;
         white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;     
 
             & .title-plate {
                 margin: 0 0 5px 0;
                 font-size: 1rem;
+                overflow: hidden;
+                text-overflow: ellipsis; 
             }
 
             & .description-plate {
@@ -136,7 +132,6 @@ body {
             transform: translateX(0)
         }            
     
-
         & .price {
             padding: 15px;
             margin: 0;
@@ -152,11 +147,11 @@ body {
             align-items: center;
             width: 59px;
             height: 100%;
-            background-color: $color11;
+            background-color: $color2;
 
             & .fa-check {
                 background-color: $color10;
-                color: $color11;
+                color: $color2;
                 width: 20px;
                 height: 20px;
                 border-radius: 50%;
@@ -184,8 +179,11 @@ body {
         }
     
 }
-
 }
+
+
+
+
 
 
 
