@@ -1,11 +1,12 @@
-@import "../base/variables";
-@import "../base/mixins";
-@import "../base/fonts";
+@import "../scss/base/variables";
+@import "../scss/base/keyframes";
+@import "../scss/base/animations";
+@import "../scss/base/mixins";
+@import "../scss/base/fonts";
+@import "../scss/layout/loader";
 @import "../scss/layout/header";
 @import "../scss/pages/homepage";
 @import "../scss/pages/menus";
 @import "../scss/layout/button";
 @import "../scss/layout/footer";
-@import "../base/keyframes";
-@import "../base/animations";
 
