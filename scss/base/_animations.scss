@@ -1,0 +1,22 @@
+@mixin choice-price {
+    display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        transform: translateX(59px);
+        transition: all 0.5s;
+        &:hover {
+            transform: translateX(0)
+        }
+}
+
+@mixin icone-favorite-choice {
+    opacity: 0;
+    transition: all;
+        &:hover {
+        opacity: 1;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(180deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 68%);
+        transition: 0.5s;
+        }
+    }

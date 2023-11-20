@@ -1,0 +1,56 @@
+/*KEYFRAMES D'ANIMATION SUR LE MENU*/
+@keyframes arrive-menu {
+    0% {
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+    }
+    100% {
+        -webkit-transform: scalex(1);
+        transform: scalex(1);
+    }
+}
+
+
+/*KEYFRAMES LOADER*/
+@keyframes loader {
+    from {        
+        transform: scale(1);
+        -webkit-transform: scale(1);        
+    }
+
+    to { 
+        transform: scale(0);
+        -webkit-transform: scale(0);        
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        opacity: 1;
+    }
+
+
+    100% { 
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        opacity: 0.2;
+    }
+
+}
+ 
+@keyframes oppositerotate {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    100% { 
+        transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg);
+        opacity: 0.2;
+    }
+
+}
