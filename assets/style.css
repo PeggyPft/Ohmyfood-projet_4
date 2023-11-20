@@ -1,5 +1,108 @@
+/*KEYFRAMES D'ANIMATION SUR LE MENU*/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@keyframes arrive-menu {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scalex(1);
+    transform: scalex(1);
+  }
+}
+/*KEYFRAMES LOADER*/
+@keyframes loader {
+  from {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    opacity: 0.2;
+  }
+}
+@keyframes oppositerotate {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    opacity: 0.2;
+  }
+}
+.container-chargement {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  opacity: 0.9;
+  z-index: 999;
+  animation: loader 150ms 3s forwards;
+}
+.container-chargement .loader-out {
+  position: absolute;
+  top: 337px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border-top: 10px solid #9356dc;
+  border-bottom: 10px solid #9356dc;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  display: inline-block;
+  border-radius: 50%;
+  opacity: 0;
+  animation: rotate 3s linear 150ms;
+  -webkit-animation: rotate 3s linear 150ms;
+  transition: opacity 0.4s ease-out;
+}
+.container-chargement .loader-in {
+  position: absolute;
+  top: 358px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border-top: 9px solid #99e2d0;
+  border-bottom: 9px solid #99e2d0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  display: inline-block;
+  border-radius: 50%;
+  opacity: 0;
+  animation: oppositerotate 3s linear 150ms;
+  -webkit-animation: oppositerotate 3s linear 150ms;
+}
+.container-chargement .ball {
+  position: absolute;
+  top: 376px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ff79da;
+  opacity: 0;
+  animation: rotate 3s linear 150ms;
+  -webkit-animation: rotate 3s linear 150ms;
+}
+
 header {
   height: 63px;
   display: flex;
@@ -14,7 +117,7 @@ header i {
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-  color: black;
+  color: #101010;
   width: 30px;
   height: 30px;
   top: 50%;
@@ -22,7 +125,7 @@ header i {
   left: 5%;
 }
 header i i:active {
-  color: black;
+  color: #101010;
 }
 header img {
   height: 36px;
@@ -217,10 +320,12 @@ body {
 }
 .restaurant .restaurant-card .restaurant-content .fa-heart {
   position: absolute;
+  font-size: 22px;
   width: 22px;
   height: 22px;
   top: 18px;
-  right: 19px;
+  right: 25px;
+  color: #101010;
 }
 .restaurant .restaurant-card .restaurant-content .heart-full {
   opacity: 0;
@@ -310,51 +415,57 @@ body {
   background-image: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 68%);
   transition: 0.5s;
 }
-.container-all-menu .sections-menu {
+
+.sections-menu {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
   width: 100%;
+  -webkit-animation: arrive-menu 1s;
 }
-.container-all-menu .sections-menu .title {
+@keyframes arrive-menu
+    
+
+    .title {
   margin: 30px 0 0 0;
   font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
 }
-.container-all-menu .sections-menu .line {
+.sections-menu .line {
   width: 40px;
-  border: 2px solid #99E2D0;
-  margin-top: 5px;
+  border: 2px solid #99e2d0;
+  margin-top: -15px;
 }
-.container-all-menu .sections-menu .container-cards {
+.sections-menu .container-cards {
   display: flex;
   flex-direction: column;
   margin-top: 15px;
   border-radius: 20px;
   gap: 15px;
 }
-.container-all-menu .sections-menu .cards {
+.sections-menu .cards {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: white;
+  background-color: #ffffff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   white-space: nowrap;
   overflow: hidden;
 }
-.container-all-menu .sections-menu .cards-content {
+.sections-menu .cards-content {
   padding: 15px;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
-.container-all-menu .sections-menu .cards-content .title-plate {
+.sections-menu .cards-content .title-plate {
   margin: 0 0 5px 0;
   font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.container-all-menu .sections-menu .cards-content .description-plate {
+.sections-menu .cards-content .description-plate {
   margin: 0;
   font-size: 0.813rem;
   font-weight: 300;
@@ -362,17 +473,17 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.container-all-menu .sections-menu .cards-price {
+.sections-menu .cards-price {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   transform: translateX(59px);
   transition: all 0.5s;
 }
-.container-all-menu .sections-menu .cards-price:hover {
+.sections-menu .cards-price:hover {
   transform: translateX(0);
 }
-.container-all-menu .sections-menu .cards-price .price {
+.sections-menu .cards-price .price {
   padding: 15px;
   margin: 0;
   font-size: 0.94rem;
@@ -380,17 +491,17 @@ body {
   display: flex;
   align-items: flex-end;
 }
-.container-all-menu .sections-menu .cards-price span {
+.sections-menu .cards-price span {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 59px;
   height: 100%;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
 }
-.container-all-menu .sections-menu .cards-price span .fa-check {
+.sections-menu .cards-price span .fa-check {
   background-color: #ffffff;
-  color: #99E2D0;
+  color: #99e2d0;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -398,8 +509,9 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+
 @media screen and (min-width: 768px) {
-  .container-all-menu .container-all-menu {
+  .container-all-menu {
     margin-left: 10%;
     margin-right: 10%;
   }
@@ -410,10 +522,14 @@ body {
     width: 70%;
   }
 }
-
+@media screen and (min-width: 1024px) {
+  .container-all-menu {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
 .button {
   margin: 40px;
-  font-size: 1rem;
   cursor: pointer;
   padding: 15px 40px;
   font-size: 1rem;
