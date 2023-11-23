@@ -109,6 +109,7 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 1;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 header i {
@@ -387,28 +388,32 @@ body {
   justify-content: center;
   align-items: center;
 }
-.container-all-menu .menu-title {
+
+.title-container {
   position: relative;
   width: 100%;
   padding: 0 5px;
 }
-.container-all-menu .menu-title h2 {
+
+h2 {
   font-family: "shrikhand";
   font-size: 1.75rem;
   font-style: italic;
 }
-.container-all-menu .menu-title i {
+
+i {
   position: absolute;
   width: 22px;
   font-size: 21px;
   top: 30px;
   right: 30px;
 }
-.container-all-menu .menu-title .heart-full {
+
+.heart-full {
   opacity: 0;
   transition: all;
 }
-.container-all-menu .menu-title .heart-full:hover {
+.heart-full:hover {
   opacity: 1;
   color: transparent;
   -webkit-background-clip: text;
@@ -422,11 +427,9 @@ body {
   margin-bottom: 10px;
   width: 100%;
   -webkit-animation: arrive-menu 1s;
+  animation: arrive-menu 1s;
 }
-@keyframes arrive-menu
-    
-
-    .title {
+.sections-menu .title {
   margin: 30px 0 0 0;
   font-size: 1rem;
   font-weight: 300;
@@ -435,7 +438,7 @@ body {
 .sections-menu .line {
   width: 40px;
   border: 2px solid #99e2d0;
-  margin-top: -15px;
+  margin-top: 5px;
 }
 .sections-menu .container-cards {
   display: flex;
@@ -459,13 +462,13 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
-.sections-menu .cards-content .title-plate {
+.sections-menu .title-plate {
   margin: 0 0 5px 0;
   font-size: 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.sections-menu .cards-content .description-plate {
+.sections-menu .description-plate {
   margin: 0;
   font-size: 0.813rem;
   font-weight: 300;
@@ -477,13 +480,14 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  position: relative;
   transform: translateX(59px);
   transition: all 0.5s;
 }
 .sections-menu .cards-price:hover {
   transform: translateX(0);
 }
-.sections-menu .cards-price .price {
+.sections-menu .price {
   padding: 15px;
   margin: 0;
   font-size: 0.94rem;
@@ -491,7 +495,7 @@ body {
   display: flex;
   align-items: flex-end;
 }
-.sections-menu .cards-price span {
+.sections-menu span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -499,15 +503,15 @@ body {
   height: 100%;
   background-color: #99e2d0;
 }
-.sections-menu .cards-price span .fa-check {
+.sections-menu span .fa-check {
+  position: absolute;
+  top: 25px;
+  right: 22px;
   background-color: #ffffff;
   color: #99e2d0;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -515,10 +519,10 @@ body {
     margin-left: 10%;
     margin-right: 10%;
   }
-  .container-all-menu .menu-title {
+  .title-container {
     width: 350px;
   }
-  .container-all-menu .sections-menu {
+  .sections-menu {
     width: 70%;
   }
 }
@@ -566,12 +570,13 @@ body {
   color: white;
   gap: 7px;
 }
-.footer .footer-link i {
-  width: 11px;
-  height: 13px;
-  padding-right: 10px;
+.footer .div-link {
+  position: relative;
 }
-.footer .footer-link a {
+.footer i {
+  width: 100%;
+}
+.footer a {
   font-size: 1rem;
   text-decoration: none;
   color: white;

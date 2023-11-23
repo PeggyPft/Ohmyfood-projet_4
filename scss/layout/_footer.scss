@@ -3,9 +3,9 @@
     background-color: $color7;
     gap: 16px;
 
-    & .footer-logo {
+    .footer-logo {
         
-        & .logo {
+        .logo {
             margin: 0;
             font-size: 1.125rem ;
             color: white;
@@ -13,25 +13,27 @@
         }
     }        
 
-    & .footer-link {
+    .footer-link {
         margin-top: 15px;
         display: flex;
         flex-direction: column;
         color: white;
         gap: 7px;
+    }
 
-            & i {
-                width: 11px;
-                height: 13px;
-                padding-right: 10px;
-            }
+    .div-link {
+        position: relative;
+    }
+           i{
+            width: 100%;
+           }
 
             a {
                 font-size: 1rem;
                 text-decoration: none;
                 color: white;
             }
-    }
+    
 
     @media screen and (min-width: 768px) {    
         padding: 40px 25px 30px 25px;

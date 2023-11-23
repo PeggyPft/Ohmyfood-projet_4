@@ -10,7 +10,7 @@ body {
     height: 275px;
     display: block;
 
-    & .img-menu {
+    .img-menu {
         width: 100%;
         height: 275px;
         object-fit: cover;
@@ -27,20 +27,20 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
+}  
     
-.menu-title {
+.title-container {
     position: relative;
     width: 100%;
     padding: 0 5px;
-
-    & h2 {
+}
+    h2 {
         font-family: "shrikhand";
         font-size: 1.75rem;
         font-style: italic;
     }
 
-    & i {
+    i {
         position: absolute;
         width: 22px;
         font-size: 21px;
@@ -49,10 +49,10 @@ body {
     }
 
     .heart-full {
-     @include icone-favorite-choice;
+     @include icone-favorite-choice
     }    
-}           
-}
+         
+
 
 .sections-menu {
     display: flex;
@@ -60,8 +60,7 @@ body {
     margin-bottom: 10px;
     width: 100%;
     -webkit-animation: arrive-menu 1s;                  
-    @keyframes arrive-menu
-    
+    animation: arrive-menu 1s;
 
     .title {
         margin: 30px 0 0 0;
@@ -73,7 +72,7 @@ body {
     .line {
         width: 40px;
         border: 2px solid $color2;
-        margin-top: -15px;
+        margin-top: 5px;
     }
 
     .container-cards {        
@@ -82,8 +81,7 @@ body {
         margin-top: 15px;
         border-radius: 20px;
         gap: 15px;            
-    }
-             
+    }           
     
     .cards {
         display: flex;
@@ -100,35 +98,36 @@ body {
         padding: 15px;
         white-space: nowrap;
         overflow: hidden;
+    }    
+        .title-plate {
+            margin: 0 0 5px 0;
+            font-size: 1rem;
+            overflow: hidden;
+            text-overflow: ellipsis; 
+        }
 
-            & .title-plate {
-                margin: 0 0 5px 0;
-                font-size: 1rem;
-                overflow: hidden;
-                text-overflow: ellipsis; 
-            }
-
-            & .description-plate {
-                margin: 0;
-                font-size: 0.813rem;
-                font-weight: 300;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;      
-            }
-    }
+        .description-plate {
+            margin: 0;
+            font-size: 0.813rem;
+            font-weight: 300;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;      
+        }
+    
 
     .cards-price {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
+        position: relative;
         transform: translateX(59px);
         transition: all 0.5s;
         &:hover {
             transform: translateX(0)
         }            
-    
-        & .price {
+    }
+        .price {
             padding: 15px;
             margin: 0;
             font-size: 0.94rem;
@@ -137,43 +136,39 @@ body {
             align-items: flex-end;
         }    
 
-        & span {                
+        span {                
             display: flex;
             justify-content: center;
             align-items: center;
             width: 59px;
             height: 100%;
             background-color: $color2;
-
-            & .fa-check {
+                        
+            .fa-check {
+                position: absolute;
+                top: 25px;
+                right: 22px;
                 background-color: $color10;
                 color: $color2;
                 width: 20px;
                 height: 20px;
-                border-radius: 50%;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                
+                border-radius: 50%;                            
             }
         }      
-    }   
 }    
   
 @media screen and (min-width: 768px) {
     .container-all-menu {  
         margin-left: 10%;
-        margin-right: 10%;
-    
-
-        .menu-title {
+        margin-right: 10%;    
+    }
+        .title-container {
             width: 350px;
         }
 
         .sections-menu {
             width: 70%;
         }
-    }
 }
 
 @media screen and (min-width: 1024px) {
