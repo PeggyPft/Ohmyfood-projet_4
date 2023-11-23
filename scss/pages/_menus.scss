@@ -5,22 +5,20 @@ body {
     font-family: "roboto";
 }
 
-
 .container-image {
     height: 275px;
     display: block;
-
+}
     .img-menu {
         width: 100%;
         height: 275px;
         object-fit: cover;
     }
-}
 
-.container-all-menu {
+.container-all-menus {
     position: relative;
     margin-top: -3rem;
-    background-color: $color1;
+    background-color: #f3f3f3;
     border-radius: 20px;
     padding: 5px 10px;
     display: flex;
@@ -28,137 +26,140 @@ body {
     justify-content: center;
     align-items: center;
 }  
-    
+
 .title-container {
     position: relative;
     width: 100%;
     padding: 0 5px;
 }
-    h2 {
-        font-family: "shrikhand";
-        font-size: 1.75rem;
-        font-style: italic;
-    }
 
-    i {
+.title-menu {
+    font-family: "shrikhand";
+    font-size: 1.75rem;
+    font-style: italic;
+}
+
+.heart {
         position: absolute;
         width: 22px;
         font-size: 21px;
         top: 30px;
         right: 30px;
-    }
+}
 
-    .heart-full {
-     @include icone-favorite-choice
-    }    
-         
+.heart-empty {
+    color: #000000;
+}
 
+.heart-full {
+    @include icone-favorite-choice
+   }    
 
 .sections-menu {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
     width: 100%;
-    -webkit-animation: arrive-menu 1s;                  
-    animation: arrive-menu 1s;
+    -webkit-animation: arrive-menu 2s ease-out;                  
+    animation: arrive-menu 2s ease-out;
+}
+        
+.subtitle-menu {
+    margin: 30px 0 0 0;
+    font-size: 1rem;            
+    font-weight: 300;
+    text-transform: uppercase;
+}
 
-    .title {
-        margin: 30px 0 0 0;
-        font-size: 1rem;            
+.line {
+    width: 40px;
+    border: 2px solid #99e2d0;
+    margin-top: 5px;
+}
+
+.container-cards {        
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    border-radius: 20px;
+    gap: 15px;            
+}      
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;        
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;        
+    white-space: nowrap;
+    overflow: hidden;           
+}    
+
+.cards-content {
+    padding: 15px;
+     white-space: nowrap;
+    overflow: hidden;
+}    
+    .title-plate {
+        margin: 0 0 5px 0;
+        font-size: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+
+    .description-plate {
+        margin: 0;
+        font-size: 0.813rem;
         font-weight: 300;
-        text-transform: uppercase;
-    }
-
-    .line {
-        width: 40px;
-        border: 2px solid $color2;
-        margin-top: 5px;
-    }
-
-    .container-cards {        
-        display: flex;
-        flex-direction: column;
-        margin-top: 15px;
-        border-radius: 20px;
-        gap: 15px;            
-    }           
-    
-    .cards {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;        
-        background-color: $color10;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        border-radius: 15px;        
-        white-space: nowrap;
-        overflow: hidden;           
-    }    
-
-    .cards-content {
-        padding: 15px;
         white-space: nowrap;
         overflow: hidden;
-    }    
-        .title-plate {
-            margin: 0 0 5px 0;
-            font-size: 1rem;
-            overflow: hidden;
-            text-overflow: ellipsis; 
-        }
-
-        .description-plate {
-            margin: 0;
-            font-size: 0.813rem;
-            font-weight: 300;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;      
-        }
-    
-
-    .cards-price {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        position: relative;
-        transform: translateX(59px);
-        transition: all 0.5s;
-        &:hover {
-            transform: translateX(0)
-        }            
+        text-overflow: ellipsis;      
     }
-        .price {
-            padding: 15px;
-            margin: 0;
-            font-size: 0.94rem;
-            font-weight: 700;
-            display: flex;
-            align-items: flex-end;
-        }    
 
-        span {                
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 59px;
-            height: 100%;
-            background-color: $color2;
-                        
-            .fa-check {
-                position: absolute;
-                top: 25px;
-                right: 22px;
-                background-color: $color10;
-                color: $color2;
-                width: 20px;
-                height: 20px;
-                border-radius: 50%;                            
-            }
-        }      
+.cards-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    transform: translateX(59px);
+    transition: all 0.5s;
+    &:hover {
+        transform: translateX(0);
+    }            
+}
+
+.price {
+    padding: 15px;
+    margin: 0;
+    font-size: 0.94rem;
+    font-weight: 700;
+    display: flex;
+    align-items: flex-end;
 }    
-  
+
+span {                
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 59px;
+    height: 100%;
+    background-color: #99e2d0;
+}
+
+.fa-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #99e2d0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;                            
+}
+
 @media screen and (min-width: 768px) {
-    .container-all-menu {  
+    .container-all-menus {  
         margin-left: 10%;
         margin-right: 10%;    
     }
@@ -172,7 +173,7 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
-    .container-all-menu {  
+    .container-all-menus {  
         margin-left: 15%;
         margin-right: 15%;    
     }
