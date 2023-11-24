@@ -3,12 +3,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @keyframes arrive-menu {
   0% {
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scalex(1);
-    transform: scalex(1);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 /*KEYFRAMES LOADER*/
@@ -140,13 +142,19 @@ body {
 }
 
 .location {
-  background-color: #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #eaeaea;
   height: 50px;
-  gap: 1.063rem;
+  gap: 1rem;
+}
+.location .research {
+  text-align: center;
   font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  width: 110px;
 }
 
 .explorer {
@@ -194,6 +202,10 @@ body {
   display: flex;
   align-items: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+.functioning .btn .fa-solid {
+  padding-right: 15px;
+  padding-left: 10px;
 }
 .functioning .number {
   position: absolute;
@@ -321,12 +333,11 @@ body {
 }
 .restaurant .restaurant-card .restaurant-content .fa-heart {
   position: absolute;
-  font-size: 22px;
+  font-size: 1.3rem;
   width: 22px;
   height: 22px;
   top: 18px;
-  right: 25px;
-  color: #101010;
+  right: 21px;
 }
 .restaurant .restaurant-card .restaurant-content .heart-full {
   opacity: 0;
@@ -371,13 +382,14 @@ body {
   height: 275px;
   display: block;
 }
-.container-image .img-menu {
+
+.img-menu {
   width: 100%;
   height: 275px;
   object-fit: cover;
 }
 
-.container-all-menu {
+.container-all-menus {
   position: relative;
   margin-top: -3rem;
   background-color: #f3f3f3;
@@ -395,18 +407,22 @@ body {
   padding: 0 5px;
 }
 
-h2 {
+.title-menu {
   font-family: "shrikhand";
   font-size: 1.75rem;
   font-style: italic;
 }
 
-i {
+.heart {
   position: absolute;
   width: 22px;
   font-size: 21px;
   top: 30px;
   right: 30px;
+}
+
+.heart-empty {
+  color: #000000;
 }
 
 .heart-full {
@@ -426,28 +442,32 @@ i {
   flex-direction: column;
   margin-bottom: 10px;
   width: 100%;
-  -webkit-animation: arrive-menu 1s;
-  animation: arrive-menu 1s;
+  -webkit-animation: arrive-menu 2s ease-out;
+  animation: arrive-menu 2s ease-out;
 }
-.sections-menu .title {
+
+.subtitle-menu {
   margin: 30px 0 0 0;
   font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
 }
-.sections-menu .line {
+
+.line {
   width: 40px;
   border: 2px solid #99e2d0;
   margin-top: 5px;
 }
-.sections-menu .container-cards {
+
+.container-cards {
   display: flex;
   flex-direction: column;
   margin-top: 15px;
   border-radius: 20px;
   gap: 15px;
 }
-.sections-menu .cards {
+
+.cards {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -457,18 +477,21 @@ i {
   white-space: nowrap;
   overflow: hidden;
 }
-.sections-menu .cards-content {
+
+.cards-content {
   padding: 15px;
   white-space: nowrap;
   overflow: hidden;
 }
-.sections-menu .title-plate {
+
+.title-plate {
   margin: 0 0 5px 0;
   font-size: 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.sections-menu .description-plate {
+
+.description-plate {
   margin: 0;
   font-size: 0.813rem;
   font-weight: 300;
@@ -476,7 +499,8 @@ i {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.sections-menu .cards-price {
+
+.cards-price {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -484,10 +508,11 @@ i {
   transform: translateX(59px);
   transition: all 0.5s;
 }
-.sections-menu .cards-price:hover {
+.cards-price:hover {
   transform: translateX(0);
 }
-.sections-menu .price {
+
+.price {
   padding: 15px;
   margin: 0;
   font-size: 0.94rem;
@@ -495,7 +520,8 @@ i {
   display: flex;
   align-items: flex-end;
 }
-.sections-menu span {
+
+span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -503,10 +529,11 @@ i {
   height: 100%;
   background-color: #99e2d0;
 }
-.sections-menu span .fa-check {
-  position: absolute;
-  top: 25px;
-  right: 22px;
+
+.fa-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #ffffff;
   color: #99e2d0;
   width: 20px;
@@ -515,7 +542,7 @@ i {
 }
 
 @media screen and (min-width: 768px) {
-  .container-all-menu {
+  .container-all-menus {
     margin-left: 10%;
     margin-right: 10%;
   }
@@ -527,7 +554,7 @@ i {
   }
 }
 @media screen and (min-width: 1024px) {
-  .container-all-menu {
+  .container-all-menus {
     margin-left: 15%;
     margin-right: 15%;
   }
@@ -570,13 +597,12 @@ i {
   color: white;
   gap: 7px;
 }
-.footer .div-link {
-  position: relative;
+.footer .footer-link i {
+  width: 11px;
+  height: 13px;
+  padding-right: 10px;
 }
-.footer i {
-  width: 100%;
-}
-.footer a {
+.footer .footer-link a {
   font-size: 1rem;
   text-decoration: none;
   color: white;

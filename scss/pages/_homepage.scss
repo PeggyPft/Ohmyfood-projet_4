@@ -70,6 +70,10 @@ body {
         display: flex;
         align-items: center;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        .fa-solid {
+            padding-right: 15px;
+            padding-left: 10px;
+        }
     }
 
     & .number {
@@ -216,10 +220,11 @@ body {
 
             .fa-heart {
                 position: absolute;
+                font-size: 1.3rem;
                 width: 22px;
                 height: 22px;
                 top: 18px;
-                right: 19px;                
+                right: 21px;                
             }
 
             .heart-full {
