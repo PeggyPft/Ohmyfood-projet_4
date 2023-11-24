@@ -149,12 +149,8 @@ body {
   height: 50px;
   gap: 1rem;
 }
-.location .research {
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 500;
-  border: none;
-  width: 110px;
+.location .fa-location-dot {
+  font-size: 1.2rem;
 }
 
 .explorer {
