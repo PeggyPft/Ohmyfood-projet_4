@@ -586,6 +586,9 @@ span {
   transform: scale(1.02);
   opacity: 0.9;
 }
+.button a {
+  text-decoration: none;
+}
 
 .footer {
   padding: 22px 25px;
