@@ -206,6 +206,7 @@ body {
 }
 .functioning .number {
   position: absolute;
+  color: #ffffff;
   height: 1.25rem;
   width: 1.25rem;
   border-radius: 50%;
@@ -487,21 +488,21 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
-
-.cards-content {
-  padding: 15px;
+.cards:hover .cards-price {
+  transform: translateX(0);
+}
+.cards .cards-content {
+  padding: 15px 0 15px 15px;
   white-space: nowrap;
   overflow: hidden;
 }
-
-.title-plate {
+.cards .title-plate {
   margin: 0 0 5px 0;
   font-size: 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-.description-plate {
+.cards .description-plate {
   margin: 0;
   font-size: 0.813rem;
   font-weight: 300;
@@ -509,8 +510,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-.cards-price {
+.cards .cards-price {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -518,12 +518,8 @@ body {
   transform: translateX(59px);
   transition: all 0.5s;
 }
-.cards-price:hover {
-  transform: translateX(0);
-}
-
-.price {
-  padding: 15px;
+.cards .price {
+  padding: 15px 15px 15px 0;
   margin: 0;
   font-size: 0.94rem;
   font-weight: 700;
