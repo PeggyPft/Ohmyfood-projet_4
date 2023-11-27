@@ -449,7 +449,7 @@ body {
 
 .section-menu2 {
   -webkit-animation: arrive-menu 1.4s ease-in-out;
-  animation: arrive-menu 1.4s eease-in-out;
+  animation: arrive-menu 1.4s ease-in-out;
 }
 
 .section-menu3 {
@@ -488,27 +488,33 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
+.cards:hover .title-plate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cards:hover .description-plate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .cards:hover .cards-price {
   transform: translateX(0);
 }
 .cards .cards-content {
-  padding: 15px 0 15px 15px;
+  padding: 15px 0 15px 10px;
   white-space: nowrap;
   overflow: hidden;
 }
 .cards .title-plate {
   margin: 0 0 5px 0;
-  font-size: 1rem;
+  font-size: 0.938rem;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 .cards .description-plate {
   margin: 0;
-  font-size: 0.813rem;
+  font-size: 0.75rem;
   font-weight: 300;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 .cards .cards-price {
   display: flex;
@@ -519,7 +525,7 @@ body {
   transition: all 0.5s;
 }
 .cards .price {
-  padding: 15px 15px 15px 0;
+  padding: 15px 10px 15px 0;
   margin: 0;
   font-size: 0.94rem;
   font-weight: 700;
