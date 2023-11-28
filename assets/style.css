@@ -488,14 +488,6 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
-.cards:hover .title-plate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.cards:hover .description-plate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 .cards:hover .cards-price {
   transform: translateX(0);
 }
@@ -504,17 +496,29 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
-.cards .title-plate {
+.cards .cards-content .title-plate {
   margin: 0 0 5px 0;
   font-size: 0.938rem;
   overflow: hidden;
 }
-.cards .description-plate {
+.cards .cards-content .description-plate {
   margin: 0;
   font-size: 0.75rem;
   font-weight: 300;
   white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (min-width: 768px) {
+  .cards .cards-content {
+    padding: 15px;
+  }
+  .cards .cards-content .title-plate {
+    font-size: 1rem;
+  }
+  .cards .cards-content .description-plate {
+    font-size: 0.813rem;
+  }
 }
 .cards .cards-price {
   display: flex;
@@ -524,16 +528,15 @@ body {
   transform: translateX(59px);
   transition: all 0.5s;
 }
-.cards .price {
-  padding: 15px 10px 15px 0;
+.cards .cards-price .price {
+  padding: 15px 15px 15px 0;
   margin: 0;
   font-size: 0.94rem;
   font-weight: 700;
   display: flex;
   align-items: flex-end;
 }
-
-span {
+.cards .cards-price span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -541,8 +544,7 @@ span {
   height: 100%;
   background-color: #99e2d0;
 }
-
-.fa-check {
+.cards .cards-price .fa-check {
   display: flex;
   align-items: center;
   justify-content: center;

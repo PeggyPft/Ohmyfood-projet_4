@@ -53,7 +53,7 @@ body {
 
 .heart-full {
     @include icone-favorite-choice
-   }    
+}    
 
 .sections-menu {
     display: flex;
@@ -109,28 +109,20 @@ body {
     white-space: nowrap;
     overflow: hidden;
     &:hover {
-        .title-plate {
-            overflow: hidden;
-            text-overflow: ellipsis;
+        .cards-price{
+        transform: translateX(0);
         }
-        .description-plate {
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .cards-price {
-            transform: translateX(0);
-        }
-    }     
-     
+    }      
+
 .cards-content {
     padding: 15px 0 15px 10px;
     white-space: nowrap;
     overflow: hidden;
-}    
+    
     .title-plate {
         margin: 0 0 5px 0;
         font-size: 0.938rem;
-        overflow: hidden;        
+        overflow: hidden;
     }
 
     .description-plate {
@@ -138,46 +130,56 @@ body {
         font-size: 0.75rem;
         font-weight: 300;
         white-space: nowrap;
-        overflow: hidden;             
+        overflow: hidden;
+        text-overflow: ellipsis;      
     }
-
-    .cards-price {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        position: relative;
-        transform: translateX(59px);
-        transition: all 0.5s;                
+    @media screen and (min-width: 768px) {
+        padding: 15px;
+        .title-plate {
+            font-size: 1rem;
+        }
+        .description-plate {
+            font-size: 0.813rem;
+        }
     }
-
+}
+.cards-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    transform: translateX(59px);
+    transition: all 0.5s;
+       
     .price {
-        padding: 15px 10px 15px 0;
+        padding: 15px 15px 15px 0;
         margin: 0;
         font-size: 0.94rem;
         font-weight: 700;
         display: flex;
         align-items: flex-end;
     }    
-}
 
-span {                
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 59px;
-    height: 100%;
-    background-color: #99e2d0;
-}
+    span {                
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 59px;
+        height: 100%;
+        background-color: #99e2d0;
+    }
 
-.fa-check {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    color: #99e2d0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;                            
+    .fa-check {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        color: #99e2d0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;                            
+    }
+}
 }
 
 @media screen and (min-width: 768px) {
@@ -191,7 +193,7 @@ span {
 
         .sections-menu {
             width: 70%;
-        }
+        }        
 }
 
 @media screen and (min-width: 1024px) {
