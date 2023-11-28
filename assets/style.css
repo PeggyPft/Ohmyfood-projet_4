@@ -500,6 +500,7 @@ body {
   margin: 0 0 5px 0;
   font-size: 0.938rem;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 .cards .cards-content .description-plate {
   margin: 0;
